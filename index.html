@@ -166,13 +166,13 @@
 				// camera.position.y = 40;
 				// camera.position.z = Math.cos(t/3000)*150;
 
-			  	var v = pointGeo2.vertices;
+		    var v = pointGeo2.vertices;
 	            for (var i = 0; i < v.length; i++) {
 	                var u = v[i];
 	                //console.log(u)
 	                //u.angle += u.speed * 0.01;
-	                u.x = u.x + (Math.random() * 2 - 1) * 0.04;
-	                //u.y = u.y + (Math.random() * 2 - 1)*0.05;
+	                u.x = u.x + (Math.cos((i + count) * 0.05) * 0.01);
+	                //u.y = u.y + (Math.random() * 2 - 1) * 0.04;
 	                u.z = u.z + (Math.sin((i + count) * 0.05) * 0.1);
 	            }
 	            count += 2;
