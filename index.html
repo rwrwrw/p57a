@@ -53,7 +53,7 @@
 	  </div>
 	  <div id="overlay2">
 	    <div>Click and drag mouse to navigate</div>
-	    <div>Double-click mouse to animate</div>
+	    <div>Double-click mouse to toggle animation</div>
 	  </div>
 	</div>
 
@@ -186,7 +186,7 @@
 	        sy += dy;
 	    }
 	}
-	var animating = false;
+	var animating = true;
 	window.ondblclick = function() {
 	     animating = !animating;
 	};
