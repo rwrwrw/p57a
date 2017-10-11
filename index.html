@@ -220,9 +220,9 @@
 	                //console.log(u)
 	                //u.angle += u.speed * 0.01;
 			//u.y = u.y + (Math.random() * 2 - 1) * 0.04;
-	                u.x = u.x + (Math.cos((i + count) * 0.04) * 0.01);
-			u.y = u.y + (Math.sin((i + count) * 0.04) * 0.012);
-	                u.z = u.z + (Math.sin((i + count) * 0.04) * 0.1);
+	                u.x = u.x + (Math.cos((i + count) * 0.04) * Math.abs(u.x-55) * 0.00015);
+	                u.y = u.y + (Math.sin((i + count) * 0.04) * Math.abs(u.x-55) * 0.00015);
+	                u.z = u.z + (Math.sin((i + count) * 0.02) * Math.abs(u.x-55) * 0.0010);
 	            }
 	            count += 2;
 	            //pointGeo2.dynamic = true;
