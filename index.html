@@ -219,8 +219,9 @@
 	                var u = v[i];
 	                //console.log(u)
 	                //u.angle += u.speed * 0.01;
+			//u.y = u.y + (Math.random() * 2 - 1) * 0.04;
 	                u.x = u.x + (Math.cos((i + count) * 0.04) * 0.01);
-	                //u.y = u.y + (Math.random() * 2 - 1) * 0.04;
+			u.y = u.y + (Math.sin((i + count) * 0.04) * 0.012);
 	                u.z = u.z + (Math.sin((i + count) * 0.04) * 0.1);
 	            }
 	            count += 2;
