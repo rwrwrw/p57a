@@ -69,7 +69,8 @@
 
 	// create the scene
 	var scene = new THREE.Scene();
-	// create the camera with 55-degree field of view and an aspect ratio that matches the viewport
+	// create the camera with 45-degree field of view and an aspect ratio that matches the viewport
+	//var camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.1, 1000);
 	var camera = new THREE.PerspectiveCamera(55, window.innerWidth / window.innerHeight, 1, 10000);
 	camera.position.z = 50;
 	camera.position.x = -50;
@@ -256,11 +257,12 @@
 	        camera.lookAt(scene.position);
 	        renderer.render(scene, camera);
 	        pointGeo2.verticesNeedUpdate = true;
-	        var camH = 'View height: ' + (camera.position.y - 1) * 10 + 'ft above Mean Water Level';
-			document.getElementById("camHeight").innerHTML = camH.toString();
-			var ptsC = 'Point count: ' + (v.length + vT.length);
-			document.getElementById("pointCount").innerHTML = ptsC.toString();
 	    }
+        var camH = 'View height: ' + (camera.position.y - 1) * 10 + 'ft above Mean Water Level';
+		document.getElementById("camHeight").innerHTML = camH.toString();
+		var ptsC = 'Point count: ' + (pointGeo.vertices.length + pointGeo2.vertices.length);
+		document.getElementById("pointCount").innerHTML = ptsC.toString();
+
 	    window.requestAnimationFrame(animate, renderer.domElement);
 	};
 	animate(new Date().getTime());
